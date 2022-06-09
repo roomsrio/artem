@@ -10,23 +10,61 @@ a {
 }
 
 body {
-  background: #1c2c68;
+  
+  background: #1B296E;
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  cursor: none;
 }
 
 #effect {
   z-index: -1;
-  top: -200px;
-  left: -200px;
+  background: url(./image/boulangegrand.jpg) center/cover;
   position: absolute;
-  height: 50px;
-  width: 50px;
-  border-radius: 40px;
-  background: linear-gradient(145deg, #19285e, #1e2f6f);
-  box-shadow: 6px 6px 13px #121c42, -6px -6px 13px #263c8e;
+  top: 5%;
+  bottom: 25%;
+  left: 20%;
+  right: 20%;
+  animation: colorAnim 80s infinite linear alternate-reverse;
+  box-shadow:  5px 5px 10px #111a3e,
+  -5px -5px 10px #020b2d;
+}
+
+@keyframes colorAnim {
+  0% {
+    border-radius: 39% 61% 70% 30% / 30% 32% 68% 70%;
+  }
+  10% {
+    border-radius: 78% 22% 24% 76% / 66% 49% 51% 34%;
+  }
+  20% {
+    border-radius: 44% 56% 45% 55% / 78% 45% 55% 22%;
+  }
+  30% {
+    border-radius: 56% 44% 71% 29% / 23% 76% 24% 77%;
+  }
+  40% {
+    border-radius: 30% 70% 19% 81% / 48% 24% 76% 52%;
+  }
+  50% {
+    border-radius: 77% 23% 66% 34% / 76% 66% 34% 24%;
+  }
+  60% {
+    border-radius: 24% 76% 23% 77% / 5% 48% 52% 95%;
+  }
+  70% {
+    border-radius: 80% 20% 59% 41% / 51% 65% 35% 49%;
+  }
+  80% {
+    border-radius: 9% 91% 30% 70% / 74% 32% 68% 26%;
+  }
+  90% {
+    border-radius: 34% 66% 71% 29% / 30% 54% 46% 70%;
+  }
+
+  100% {
+    border-radius: 60% 40% 26% 74% / 49% 76% 24% 51%;
+  }
 }
 
 .accueil {
@@ -38,29 +76,31 @@ body {
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: auto;
   margin: auto;
   border-radius: 1000px;
   background: rgb(255, 255, 255);
-  width: 150px;
-  height: 150px;
+  width: 10vw;
+  height: 10vw;
   overflow: hidden;
   box-shadow: #ffffff 0px 0px 10px 5px;
 }
 
 .logo img {
-  transition: 5s;
-  transform: rotatez(45deg);
-  margin-top: 12px;
-  width: 160px;
-  height: 160px;
-  padding: 20px;
+  transform: rotatez(45deg) translateX(2px);
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6rem;
+  height: 6rem;
 }
 
 #svgAnim {
   display: flex;
-  margin: 2rem auto 0 auto;
-  perspective: 1000px;
+  margin: 5rem auto 0 auto;
 }
 
 .container {
@@ -69,10 +109,10 @@ body {
 }
 
 h1 {
-  font-family: "Lora", serif;
+  font-family: 'Carrois Gothic', sans-serif;
   text-align: center;
   color: #8dba19;
-  margin-top: 90px;
+  margin-top: 100px;
   transition: 0.7s linear;
   cursor: none;
 }
@@ -103,7 +143,9 @@ h1 {
   align-items: center;
 }
 
-.navLinks a {
+.btn {
+  transition: 0.2s linear;
+  position: relative;
   margin: 0.5rem;
   padding: 0.6rem;
   cursor: pointer;
@@ -112,15 +154,33 @@ h1 {
   font-size: large;
   font-family: "Amethysta", serif;
   border-radius: 5px;
-  background: linear-gradient(145deg, #f4f4f4, #cdcdcd);
+  /* background: linear-gradient(145deg, #f4f4f4, #cdcdcd); */
   box-shadow: 5px 5px 10px #878787, -5px -5px 10px #ffffff;
 }
 
-.navLinks a:hover {
+.btn::before {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  opacity: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition: 0.3s linear;
+  content: "";
+  left: 50%;
+  top: 50%;
+  background: #1c2c68;
+}
+.btn:hover {
+  color: white;
+}
+.btn:hover::before {
   border-radius: 5px;
   background: #1c2c68;
   color: white;
   box-shadow: inset 5px 5px 10px #111a3d, inset -5px -5px 10px #273e93;
+  width: 100%;
+  opacity: 1;
 }
 
 #presentation {
@@ -154,7 +214,7 @@ h2 {
   color: #8dba19;
 }
 
-.btn {
+.savoir {
   color: #8dba19;
   margin-top: 3rem;
   height: 40px;
