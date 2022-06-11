@@ -1,7 +1,6 @@
 const logoContainer = document.querySelector(".logo");
 const title = document.querySelector("h1");
 let positionNavBar = main.offsetTop;
-console.log(positionNavBar);
 
 function sticky() {
   let posCurseur = this.pageYOffset;
@@ -9,21 +8,13 @@ function sticky() {
     navbar.style.position = "fixed";
     navbar.style.top = 0;
     navbar.style.width = "90%";
-  } 
-  else {
+  } else {
     navbar.style.position = "relative";
     navbar.style.width = "100%";
   }
 }
 
 window.addEventListener("scroll", sticky);
-
-logoContainer.addEventListener("mouseenter", () => {
-  logo.style.transform = "rotateZ(765deg)";
-});
-logoContainer.addEventListener("mouseleave", () => {
-  logo.style.transform = "rotateZ(-675deg)";
-});
 
 anime({
   targets: "#svgAnim path",
@@ -34,28 +25,13 @@ anime({
   loop: true,
 });
 
-// window.addEventListener("scroll", (e) => {
-// console.log(main.viewportY);
-// if (window.scrollY > 50) {
-//   title.style.transform = "translateZ(2000px)";
-//   title.style.margin = "-100px auto 0 auto";
-//   main.style.margin = "-20rem auto 0 ";
-//   main.style.width = "90%";
-//   navbar.style.opacity = "1";
-// } else {
-//   title.style.margin = "90px 0 0 0";
-//   title.style.transform = "translateZ(0)";
-//   main.style.margin = "-8rem auto 0";
-//   main.style.width = "20%";
-//   navbar.style.opacity = "0";
-// }
+const navigationHeight = navbar.offsetHeight;
 
-// if (window.scrollY >= 630) {
-//   navbar.style.position = "fixed";
-//   navbar.style.top = "0";
-//   navbar.style.width = "90%";
-// } else {
-//   navbar.style.position = "static";
-//   navbar.style.width = "100%";
-// }
-// });
+document.documentElement.style.setProperty(
+  "--scroll-padding",
+  navigationHeight + 100 + "px"
+);
+
+scrollDown.addEventListener("click", () => {
+  window.scrollTo(0, 600)
+});

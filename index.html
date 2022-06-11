@@ -9,45 +9,48 @@
 	<title>Artem</title>
 	<link rel="shortcut icon" href="./image/logo carre.jpg">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+	integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Amethysta&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
+</head >
 
 <body id="romain">
-	<div id="effect"></div>
+	<div id="effect" data-aos="flip-up" data-aos-duration="3000"></div>
 	<div class="accueil">
 		<div>
-			<div class="logo">
+			<div class="logo" data-aos="fade-left" data-aos-duration="3000">
 				<img src="./image/logo carre.jpg" alt="logo artem">
 			</div>
 			<svg id="svgAnim" width="401" height="72" viewBox="0 0 401 73" fill="none"
 				xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M31.664 1.84H30.9983L30.7415 2.45409L2.22945 70.6141L1.64972 72H3.15199H10.352H11.0228L11.2773 71.3793L19.7588 50.688H49.0439L57.6202 71.3828L57.8759 72H58.544H65.648H67.1464L66.5715 70.6163L38.2515 2.4563L37.9954 1.84H37.328H31.664ZM93.619 71V72H94.619H101.339H102.339V71V46.848H120.951L136.688 71.5375L136.983 72H137.531H145.115H146.935L145.959 70.4639L130.001 45.3351C132.658 44.5825 135.008 43.3092 137.037 41.5131C139.456 39.4285 141.303 36.8736 142.576 33.8619C143.913 30.8518 144.579 27.6437 144.579 24.248C144.579 21.495 144.042 18.811 142.974 16.2024C141.971 13.5338 140.502 11.1303 138.571 8.99672C136.696 6.78959 134.48 5.04471 131.93 3.76957C129.348 2.47851 126.505 1.84 123.419 1.84H94.619H93.619V2.84V71ZM134.049 17.1208L134.057 17.1353L134.065 17.1496C135.259 19.2984 135.859 21.6582 135.859 24.248C135.859 26.7947 135.345 29.2138 134.316 31.5146C133.295 33.7366 131.864 35.5195 130.023 36.8849C128.227 38.2176 126.104 38.896 123.611 38.896H102.339V9.792H123.035C125.389 9.792 127.488 10.4642 129.363 11.812L129.378 11.8223L129.392 11.8321C131.356 13.1409 132.907 14.8967 134.049 17.1208ZM224.266 9.792H225.266V8.792V2.84V1.84H224.266H168.969H167.969V2.84V8.792V9.792H168.969H192.257V71V72H193.257H199.977H200.977V71V9.792H224.266ZM300.467 65.048V64.048H299.467H261.395V40.032H293.707H294.707V39.032V33.368V32.368H293.707H261.395V9.792H298.603H299.603V8.792V2.84V1.84H298.603H253.675H252.675V2.84V71V72H253.675H299.467H300.467V71V65.048ZM390.759 71V72H391.759H398.479H399.479V71V2.84V1.84H398.479H391.663H391.084L390.796 2.34213L364.882 47.482L339.156 2.34482L338.868 1.84H338.287H331.375H330.375V2.84V71V72H331.375H338.095H339.095V71V19.2595L361.996 59.1142L362.285 59.616H362.863H367.087H367.667L367.955 59.1128L390.759 19.2721V71ZM34.4416 13.3467L46.6888 43.408H22.0231L34.4416 13.3467Z"
-					fill="#1C2C75" stroke="#F5F5F5" stroke-width="4" />
+					fill="transparent" stroke="#F5F5F5" stroke-width="4" />
 			</svg>
 			<div class="container">
 				<h1>Les supports d'avenir pour la pâte traditionnelle</h1>
 			</div>
+			<lottie-player id="scrollDown" src="https://assets6.lottiefiles.com/packages/lf20_o87tttfh.json"  background="transparent"  speed="0.5"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
+		
 		</div>
 	</div>
 	<div id="main">
 		<div id="navbar">
 			<ul class="navLinks">
-				<li class="navLink 1"><a class="btn" href="#presentation">Présentation</a></li>
-				<li class="navLink 2"><a class="btn" href="#produits">Nos produits</a></li>
+				<li class="navLink 1"><a class="btn presentation" href="#presentation">Présentation</a></li>
+				<li class="navLink 2"><a class="btn produits" href="#produits">Nos produits</a></li>
 				<li class="navLink 3"><a class="btn" href="https://pay-pro.monetico.fr/artem/paiementenligne" target="_blank">Régler
 						une facture</a></li>
-				<li class="navLink 4"><a class="btn" href="#contact">Contact</a></li>
+				<li class="navLink 4"><a class="btn contact" href="#contact">Contact</a></li>
 			</ul>
 		</div>
 
 		<div id="presentation">
-			<div id="facade" data-aos=data-aos="flip-right" data-aos-easing="linear" data-aos-duration="400">
+			<div id="facade" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="400">
 				<img src="./image/Facade.jpg" alt="photo de boulangerie"></div>
 			<div id="textPresentation" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="400">
 				<h2>Artem, 40 ans au service des professionnels de la boulangerie</h2>
@@ -78,8 +81,7 @@
 		<div class="separation"></div>
 
 		<div id="contact">
-			<div class="mainImg" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="400"><img
-					src="./image/contact.jpg" alt="photo de contact"></div>
+			<div class="mainImg" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="400"><lottie-player class="lottie" src="https://assets10.lottiefiles.com/packages/lf20_q8rluvbt.json"  background="transparent"  speed="1"  style="width: 25rem; height: 25rem;"  loop autoplay></lottie-player></div>
 			<div id="textContact" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="400">
 				<h2>N'hésitez pas à nous contacter :</h2>
 				<a href="tel:+33164110033">&#128379; +33 1 64 11 00 33</a>
@@ -88,7 +90,6 @@
 			</div>
 		</div>
 	</div>
-
 
 
 

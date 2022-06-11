@@ -4,14 +4,19 @@
   box-sizing: border-box;
   list-style: none;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 50px);
+}
+
 a {
   text-decoration: none;
   cursor: alias;
 }
 
 body {
-  
-  background: #1B296E;
+  background: #1b296e;
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
@@ -20,14 +25,13 @@ body {
 #effect {
   z-index: -1;
   background: url(./image/boulangegrand.jpg) center/cover;
-  position: absolute;
+  position: fixed;
   top: 5%;
-  bottom: 25%;
-  left: 20%;
-  right: 20%;
-  animation: colorAnim 80s infinite linear alternate-reverse;
-  box-shadow:  5px 5px 10px #111a3e,
-  -5px -5px 10px #020b2d;
+  bottom: 30%;
+  left: 10%;
+  right: 10%;
+  animation: colorAnim 40s infinite linear alternate-reverse;
+  box-shadow: 5px 5px 10px #232d0b, -5px -5px 10px #232d0b;
 }
 
 @keyframes colorAnim {
@@ -68,6 +72,7 @@ body {
 }
 
 .accueil {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -80,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: auto;
-  margin: auto;
+  margin: 5rem auto 0 auto;
   border-radius: 1000px;
   background: rgb(255, 255, 255);
   width: 10vw;
@@ -100,7 +105,7 @@ body {
 
 #svgAnim {
   display: flex;
-  margin: 5rem auto 0 auto;
+  margin: 7rem auto 0 auto;
 }
 
 .container {
@@ -109,21 +114,25 @@ body {
 }
 
 h1 {
-  font-family: 'Carrois Gothic', sans-serif;
+  font-family: "Carrois Gothic", sans-serif;
+  margin-top: 3rem;
   text-align: center;
-  color: #8dba19;
-  margin-top: 100px;
+  color: #ececec;
   transition: 0.7s linear;
   cursor: none;
 }
 
+lottie-player {
+  position: relative;
+  left: calc(50% - 50px);
+}
 #main {
   position: relative;
-  cursor: auto;
+  top: 100vh;
   display: block;
   overflow: hidden;
   width: 90%;
-  margin: -4rem auto 0 auto;
+  margin: 0 auto 0 auto;
   border-radius: 10px;
   background: whitesmoke;
   transition: linear 0.3s;
@@ -245,7 +254,8 @@ h2 {
   margin: auto;
 }
 
-.mainImg img {
+.mainImg img,
+.lottie {
   border: 1px solid #8dba19;
   padding: 10px;
   width: 25rem;
@@ -254,7 +264,7 @@ h2 {
 
 #contact {
   justify-content: space-around;
-  margin: 8rem 2rem 8rem 2rem;
+  margin: 8rem 2rem 8rem -5rem;
   display: flex;
   height: 100%;
 }
