@@ -20,6 +20,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  user-select: none;
 }
 
 #effect {
@@ -30,46 +31,25 @@ body {
   bottom: 30%;
   left: 10%;
   right: 10%;
-  animation: colorAnim 40s infinite linear alternate-reverse;
-  box-shadow: 5px 5px 10px #232d0b, -5px -5px 10px #232d0b;
+  /* animation: colorAnim 40s infinite linear alternate-reverse;*/
+  box-shadow: inset 0px 0px 10px 80px #1b296e;
 }
 
-@keyframes colorAnim {
-  0% {
-    border-radius: 39% 61% 70% 30% / 30% 32% 68% 70%;
-  }
-  10% {
-    border-radius: 78% 22% 24% 76% / 66% 49% 51% 34%;
-  }
+/* canvas{
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+  animation: canv 5s;
+}
+
+@keyframes canv {
   20% {
-    border-radius: 44% 56% 45% 55% / 78% 45% 55% 22%;
+    background: #1b296e;
   }
-  30% {
-    border-radius: 56% 44% 71% 29% / 23% 76% 24% 77%;
-  }
-  40% {
-    border-radius: 30% 70% 19% 81% / 48% 24% 76% 52%;
-  }
-  50% {
-    border-radius: 77% 23% 66% 34% / 76% 66% 34% 24%;
-  }
-  60% {
-    border-radius: 24% 76% 23% 77% / 5% 48% 52% 95%;
-  }
-  70% {
-    border-radius: 80% 20% 59% 41% / 51% 65% 35% 49%;
-  }
-  80% {
-    border-radius: 9% 91% 30% 70% / 74% 32% 68% 26%;
-  }
-  90% {
-    border-radius: 34% 66% 71% 29% / 30% 54% 46% 70%;
-  }
-
   100% {
-    border-radius: 60% 40% 26% 74% / 49% 76% 24% 51%;
+    background: transparent;
   }
-}
+} */
 
 .accueil {
   position: fixed;
