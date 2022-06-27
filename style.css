@@ -16,48 +16,31 @@ a {
 }
 
 body {
-  background: #1b296e;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 44, 104, 1) 40%,
+    rgba(141, 186, 25, 1) 80%
+  );
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
   user-select: none;
 }
 
-#effect {
-  z-index: -1;
-  background: url(./image/boulangegrand.jpg) center/cover;
-  position: fixed;
-  top: 5%;
-  bottom: 30%;
-  left: 10%;
-  right: 10%;
-  /* animation: colorAnim 40s infinite linear alternate-reverse;*/
-  box-shadow: inset 0px 0px 10px 80px #1b296e;
-}
-
-/* canvas{
-  width: 100%;
-  height: 100%;
-  transition: 2s;
-  animation: canv 5s;
-}
-
-@keyframes canv {
-  20% {
-    background: #1b296e;
-  }
-  100% {
-    background: transparent;
-  }
-} */
-
-.accueil {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.accueil {
+  background: url(./image/boulangegrand.jpg) center/cover;
+  position: fixed;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 5px;
 }
 
 .logo {
@@ -68,8 +51,8 @@ body {
   margin: 5rem auto 0 auto;
   border-radius: 1000px;
   background: rgb(255, 255, 255);
-  width: 10vw;
-  height: 10vw;
+  width: 11vw;
+  height: 11vw;
   overflow: hidden;
   box-shadow: #ffffff 0px 0px 10px 5px;
 }
@@ -95,11 +78,15 @@ body {
 
 h1 {
   font-family: "Carrois Gothic", sans-serif;
-  margin-top: 3rem;
+  font-size: 24px;
+  margin: 1rem auto 0 auto;
+  border-radius: 50px;
   text-align: center;
   color: #ececec;
   transition: 0.7s linear;
   cursor: none;
+  backdrop-filter: brightness(90%);
+  width: 60%;
 }
 
 lottie-player {
@@ -112,7 +99,7 @@ lottie-player {
   display: block;
   overflow: hidden;
   width: 90%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   border-radius: 10px;
   background: whitesmoke;
   transition: linear 0.3s;
@@ -158,17 +145,26 @@ lottie-player {
   content: "";
   left: 50%;
   top: 50%;
-  background: #1c2c68;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 44, 104, 1) 40%,
+    rgba(141, 186, 25, 1) 60%
+  );
 }
 .btn:hover {
   color: white;
 }
 .btn:hover::before {
   border-radius: 5px;
-  background: #1c2c68;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 44, 104, 1) 40%,
+    rgba(141, 186, 25, 1) 60%
+  );
   color: white;
-  box-shadow: inset 5px 5px 10px #111a3d, inset -5px -5px 10px #273e93;
+  /* box-shadow: inset 5px 5px 10px #111a3d, inset -5px -5px 10px #273e93; */
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -210,6 +206,11 @@ h2 {
   width: 100px;
 }
 
+p {
+  font-size: 19px;
+  line-height: 28px;
+}
+
 .separation {
   width: 100%;
   height: 1px;
@@ -226,7 +227,7 @@ h2 {
 
 #textProduits {
   display: block;
-  width: 50%;
+  width: 40%;
   margin: auto;
 }
 
@@ -239,28 +240,180 @@ h2 {
   border: 1px solid #8dba19;
   padding: 10px;
   width: 25rem;
-  height: 20rem;
+  height: 25rem;
 }
 
 #contact {
   justify-content: space-around;
-  margin: 8rem 2rem 8rem -5rem;
+  margin: 8rem 0rem 8rem -10rem;
   display: flex;
   height: 100%;
 }
 
 #textContact {
   display: block;
-  width: 40%;
+  width: 30%;
   margin: auto;
   text-align: center;
 }
 
 #textContact a {
   display: block;
+  font-size: 20px;
   margin: 1rem;
 }
 
 #textContact p {
   margin: 1rem;
+  font-size: 22px;
+}
+
+.rock {
+  z-index: 3;
+  width: 200px;
+  height: 140px;
+  transition: 0.8s;
+}
+
+.left {
+  background: url(./image/ARLIN\ 2\ reduite.jpg) center/cover;
+  border-radius: 17% 83% 84% 16% / 85% 30% 70% 15%;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+  box-shadow: 10px 10px 20px #000000, -10px -10px 20px #000000;
+}
+
+.left:hover {
+  background: url(./image/ARCONET\ -\ Copie.jpg) center/cover;
+  transform: scale(1.5);
+  border-radius: 78% 22% 60% 40% / 82% 52% 48% 18%;
+  left: 30px;
+}
+
+.right {
+  background: url(./image/MP\ -\ Copie.jpg) center/cover;
+  border-radius: 43% 57% 65% 35% / 9% 80% 20% 91%;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  box-shadow: 10px 10px 20px #ffffff, -10px -10px 20px #ffffff;
+}
+
+.right:hover {
+  background: url(./image/TRTL.jpg) center/cover;
+  transform: scale(1.5);
+  border-radius: 78% 22% 60% 40% / 82% 52% 48% 18%;
+  right: 30px;
+}
+
+.bottom {
+  background: url(./image/ARCOT\ EC100\ AGRAFE\ +\ BARRETTE\ 2\ -\ Copie.jpg)
+    center/cover;
+  border-radius: 80% 20% 25% 75% / 66% 33% 67% 34%;
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  box-shadow: 10px 10px 10px #ffffff, -10px -10px 10px #ffffff;
+}
+
+.bottom:hover {
+  background: url(./image/ARCOT\ 500\ -\ Copie.jpg) center/cover;
+  transform: scale(1.5);
+  border-radius: 28% 72% 21% 79% / 82% 24% 76% 18%;
+  left: 30px;
+}
+
+.top {
+  background: url(./image/textile.jpg) center/cover;
+  border-radius: 52% 48% 9% 91% / 64% 21% 79% 36%;
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  box-shadow: 10px 10px 20px #000000, -10px -10px 20px #000000;
+}
+
+.top:hover {
+  background: url(./image/TB\ ARCONET\ 2.jpg) center/cover;
+  transform: scale(1.5);
+  border-radius: 78% 22% 60% 40% / 82% 52% 48% 18%;
+  box-shadow: 10px 10px 20px #ffffff, -10px -10px 20px #ffffff;
+  right: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo img {
+    transform: scale(0.8) rotatez(45deg) translateX(2px);
+  }
+
+  .rock {
+    width: 145px;
+    height: 100px;
+  }
+
+  #svgAnim {
+    backdrop-filter: brightness(70%);
+  }
+
+  #facade img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  #textProduit {
+    margin: 0 15px 0 0;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .mainImg img {
+    border: 1px solid #8dba19;
+    padding: 10px;
+    width: 18rem;
+    height: 14rem;
+  }
+
+  .lottie {
+    transform: scale(0.7);
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#scrollDown {
+  display: none;
+}
+
+#main{
+  width: 100vw;
+  border-radius: 0;
+}
+
+  .rock {
+    display: none;
+  }
+  #svgAnim {
+ width: 50%;
+ backdrop-filter: brightness(30%);
+  }
+  
+  h1{
+    font-size: 16px;
+  }
+
+  .logo img {
+    transform: scale(0.6) rotatez(45deg) translateX(2px);
+  }
 }

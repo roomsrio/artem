@@ -7,6 +7,7 @@ function sticky() {
   if (positionNavBar - posCurseur < 1) {
     navbar.style.position = "fixed";
     navbar.style.top = 0;
+    navbar.style.borderRadius = 0;
     navbar.style.width = "90%";
   } else {
     navbar.style.position = "relative";
@@ -33,5 +34,15 @@ document.documentElement.style.setProperty(
 );
 
 scrollDown.addEventListener("click", () => {
-  window.scrollTo(0, 600)
+  window.scrollTo(0, 1280);
+});
+
+LottieInteractivity.create({
+  player:'#toggleLottie',
+  mode:"cursor",
+  actions: [
+      {
+          type: "toggle"
+      }
+]
 });

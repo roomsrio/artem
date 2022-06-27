@@ -10,18 +10,22 @@
 	<link rel="shortcut icon" href="./image/logo carre.jpg">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-	integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Amethysta&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head >
+</head>
 
-<body id="romain">
-	<div id="effect" data-aos="flip-up" data-aos-duration="3000"><canvas></canvas></div>
+<header>
 	<div class="accueil">
 		<div>
+			<div class="rock left"></div>
+			<div class="rock right"></div>
+			<div class="rock bottom"></div>
+			<div class="rock top"></div>
 			<div class="logo" data-aos="fade-left" data-aos-duration="3000">
 				<img src="./image/logo carre.jpg" alt="logo artem">
 			</div>
@@ -34,16 +38,22 @@
 			<div class="container">
 				<h1>Les supports d'avenir pour la pâte traditionnelle</h1>
 			</div>
-			<lottie-player id="scrollDown" src="https://assets6.lottiefiles.com/packages/lf20_o87tttfh.json"  background="transparent"  speed="0.5"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
-		
+			<lottie-player id="scrollDown" src="https://assets6.lottiefiles.com/packages/lf20_o87tttfh.json"
+				background="transparent" speed="0.5" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+				<lottie-player id="toggleLottie" src="https://assets1.lottiefiles.com/packages/lf20_pzurc3wa.json" style="width:100px; height: 100px;">"></lottie-player>
 		</div>
 	</div>
+</header>
+
+<body id="romain">
+
 	<div id="main">
 		<div id="navbar">
 			<ul class="navLinks">
 				<li class="navLink 1"><a class="btn presentation" href="#presentation">Présentation</a></li>
 				<li class="navLink 2"><a class="btn produits" href="#produits">Nos produits</a></li>
-				<li class="navLink 3"><a class="btn" href="https://pay-pro.monetico.fr/artem/paiementenligne" target="_blank">Régler
+				<li class="navLink 3"><a class="btn" href="https://pay-pro.monetico.fr/artem/paiementenligne"
+						target="_blank">Régler
 						une facture</a></li>
 				<li class="navLink 4"><a class="btn contact" href="#contact">Contact</a></li>
 			</ul>
@@ -81,7 +91,11 @@
 		<div class="separation"></div>
 
 		<div id="contact">
-			<div class="mainImg" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="400"><lottie-player class="lottie" src="https://assets10.lottiefiles.com/packages/lf20_q8rluvbt.json"  background="transparent"  speed="1"  style="width: 25rem; height: 25rem;"  loop autoplay></lottie-player></div>
+			<div class="mainImg" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="400">
+				<lottie-player class="lottie" src="https://assets10.lottiefiles.com/packages/lf20_q8rluvbt.json"
+					background="transparent" speed="1" loop autoplay>
+				</lottie-player>
+			</div>
 			<div id="textContact" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="400">
 				<h2>N'hésitez pas à nous contacter :</h2>
 				<a href="tel:+33164110033">&#128379; +33 1 64 11 00 33</a>
