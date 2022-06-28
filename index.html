@@ -10,7 +10,6 @@
 	<link rel="shortcut icon" href="./image/logo carre.jpg">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
 		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -18,7 +17,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Amethysta&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-
+<button class="burger">
+	<span class="bar"></span>
+</button>
 <header>
 	<div class="accueil">
 		<div>
@@ -40,7 +41,7 @@
 			</div>
 			<lottie-player id="scrollDown" src="https://assets6.lottiefiles.com/packages/lf20_o87tttfh.json"
 				background="transparent" speed="0.5" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
-				<lottie-player id="toggleLottie" src="https://assets1.lottiefiles.com/packages/lf20_pzurc3wa.json" style="width:100px; height: 100px;">"></lottie-player>
+
 		</div>
 	</div>
 </header>
@@ -48,7 +49,7 @@
 <body id="romain">
 
 	<div id="main">
-		<div id="navbar">
+		<nav id="navbar">
 			<ul class="navLinks">
 				<li class="navLink 1"><a class="btn presentation" href="#presentation">Présentation</a></li>
 				<li class="navLink 2"><a class="btn produits" href="#produits">Nos produits</a></li>
@@ -57,7 +58,7 @@
 						une facture</a></li>
 				<li class="navLink 4"><a class="btn contact" href="#contact">Contact</a></li>
 			</ul>
-		</div>
+		</nav>
 
 		<div id="presentation">
 			<div id="facade" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="400">

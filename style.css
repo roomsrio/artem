@@ -33,6 +33,7 @@ header {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  transition: 0.5s linear;
 }
 
 .accueil {
@@ -93,9 +94,13 @@ lottie-player {
   position: relative;
   left: calc(50% - 50px);
 }
+
+.burger {
+  display: none;
+}
+
 #main {
   position: relative;
-  top: 100vh;
   display: block;
   overflow: hidden;
   width: 90%;
@@ -386,34 +391,104 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  header {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 45px);
+  }
 
-header {
-  display: flex;
-  justify-content: center;
+.accueil{
+  height: 80vh;
 }
 
-#scrollDown {
-  display: none;
-}
+  #scrollDown {
+    display: none;
+  }
 
-#main{
-  width: 100vw;
-  border-radius: 0;
-}
+
+  #main {
+    width: 100vw;
+    border-radius: 0;
+  }
 
   .rock {
     display: none;
   }
   #svgAnim {
- width: 50%;
- backdrop-filter: brightness(30%);
+    width: 50%;
+    backdrop-filter: brightness(30%);
   }
-  
-  h1{
+
+  h1 {
     font-size: 16px;
   }
 
   .logo img {
     transform: scale(0.6) rotatez(45deg) translateX(2px);
   }
+
+/* toggle menu */
+.burger {
+  display: block;
+  margin: 20px auto 0;
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.bar {
+  margin: auto;
+  position: relative;
+  
+  display: block;
+  width: 45px;
+  height: 4px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.show-nav .bar {
+  width: 0;
+  background: transparent;
+}
+.bar::before,
+.bar::after {
+  content: "";
+  width: 45px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.bar::before {
+  transform: translateY(-12px);
+}
+.bar::after {
+  transform: translateY(12px);
+}
+.show-nav .bar::before {
+  transform: rotate(45deg);
+}
+.show-nav .bar::after {
+  transform: rotate(-45deg);
+}
+.show-nav .first {
+  transition: all 1s ease-out;
+}
+.show-nav .second {
+  transition: all 1.1s ease-out;
+}
+.show-nav .third {
+  transition: all 1.2s ease-out;
+}
+.show-nav .four {
+  transition: all 1.3s ease-out;
+}
+.show-nav .fifth {
+  transition: all 1.4s ease-out;
+}
+
 }

@@ -34,15 +34,18 @@ document.documentElement.style.setProperty(
 );
 
 scrollDown.addEventListener("click", () => {
-  window.scrollTo(0, 1280);
+  window.scrollTo(0, 650);
 });
 
-LottieInteractivity.create({
-  player:'#toggleLottie',
-  mode:"cursor",
-  actions: [
-      {
-          type: "toggle"
-      }
-]
-});
+function toggleMenu() {
+  const navbar = document.getElementById("navbar");
+  const header = document.querySelector("header");
+  const burger = document.querySelector(".burger");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("show-nav");
+    if (burger.classList.contains("show-nav")) {
+      header.style.height = "0";
+    }
+  });
+}
+toggleMenu();
