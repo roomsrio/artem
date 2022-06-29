@@ -44,7 +44,11 @@ function toggleMenu() {
   burger.addEventListener("click", () => {
     burger.classList.toggle("show-nav");
     if (burger.classList.contains("show-nav")) {
-      header.style.height = "0";
+      navbar.classList.add(".navToggle");
+      header.style.display = "none";
+    } else {
+      header.style.display = "flex";
+      main.style.display = "block";
     }
   });
 }
