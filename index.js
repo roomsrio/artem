@@ -45,7 +45,7 @@ function toggleMenu() {
     burger.classList.toggle("show-nav");
     if (burger.classList.contains("show-nav")) {
       navbar.classList.add(".navToggle");
-      header.style.display = "none";
+      header.style.dislpay = "none";
     } else {
       header.style.display = "flex";
       main.style.display = "block";

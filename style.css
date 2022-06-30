@@ -482,7 +482,7 @@ p {
       rgba(28, 44, 104, 1) 80%
     );
   }
-}
+
 
 #navbar {
   height: 100vh;
@@ -512,7 +512,7 @@ li {
 
 .btn:hover::before {
   width: 0;
-}
+}}
 /* .show-nav .first {
     transition: all 1s ease-out;
   }
